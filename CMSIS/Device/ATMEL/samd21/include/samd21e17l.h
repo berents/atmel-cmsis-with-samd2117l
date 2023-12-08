@@ -401,6 +401,109 @@ void TCC3_Handler                  ( void );
 #define TCC3_BASE_ADDRESS                _UINT32_(0x42006000)                          /* TCC3 Base Address */
 #define WDT_BASE_ADDRESS                 _UINT32_(0x40001000)                          /* WDT Base Address */
 
+#define AC                ((Ac       *)AC_BASE_ADDRESS) /**< \brief (AC) APB Base Address */
+#define AC1               ((Ac       *)AC1_BASE_ADDRESS) /**< \brief (AC1) APB Base Address */
+#define AC_INST_NUM       2                          /**< \brief (AC) Number of instances */
+#define AC_INSTS          { AC, AC1 }                /**< \brief (AC) Instances List */
+
+#define ADC               ((Adc      *)ADC_BASE_ADDRESS) /**< \brief (ADC) APB Base Address */
+#define ADC_INST_NUM      1                          /**< \brief (ADC) Number of instances */
+#define ADC_INSTS         { ADC }                    /**< \brief (ADC) Instances List */
+
+#define DAC               ((Dac      *)DAC_BASE_ADDRESS) /**< \brief (DAC) APB Base Address */
+#define DAC_INST_NUM      1                          /**< \brief (DAC) Number of instances */
+#define DAC_INSTS         { DAC }                    /**< \brief (DAC) Instances List */
+
+#define DMAC              ((Dmac     *)DMAC_BASE_ADDRESS) /**< \brief (DMAC) APB Base Address */
+#define DMAC_INST_NUM     1                          /**< \brief (DMAC) Number of instances */
+#define DMAC_INSTS        { DMAC }                   /**< \brief (DMAC) Instances List */
+
+#define DSU               ((Dsu      *)DSU_BASE_ADDRESS) /**< \brief (DSU) APB Base Address */
+#define DSU_INST_NUM      1                          /**< \brief (DSU) Number of instances */
+#define DSU_INSTS         { DSU }                    /**< \brief (DSU) Instances List */
+
+#define EIC               ((Eic      *)EIC_BASE_ADDRESS) /**< \brief (EIC) APB Base Address */
+#define EIC_INST_NUM      1                          /**< \brief (EIC) Number of instances */
+#define EIC_INSTS         { EIC }                    /**< \brief (EIC) Instances List */
+
+#define EVSYS             ((Evsys    *)EVSYS_BASE_ADDRESS) /**< \brief (EVSYS) APB Base Address */
+#define EVSYS_INST_NUM    1                          /**< \brief (EVSYS) Number of instances */
+#define EVSYS_INSTS       { EVSYS }                  /**< \brief (EVSYS) Instances List */
+
+#define GCLK              ((Gclk     *)GCLK_BASE_ADDRESS) /**< \brief (GCLK) APB Base Address */
+#define GCLK_INST_NUM     1                          /**< \brief (GCLK) Number of instances */
+#define GCLK_INSTS        { GCLK }                   /**< \brief (GCLK) Instances List */
+
+#define SBMATRIX          ((Hmatrixb *)SBMATRIX_BASE_ADDRESS) /**< \brief (SBMATRIX) APB Base Address */
+#define HMATRIXB_INST_NUM 1                          /**< \brief (HMATRIXB) Number of instances */
+#define HMATRIXB_INSTS    { SBMATRIX }               /**< \brief (HMATRIXB) Instances List */
+
+#define MTB               ((Mtb      *)MTB_BASE_ADDRESS) /**< \brief (MTB) APB Base Address */
+#define MTB_INST_NUM      1                          /**< \brief (MTB) Number of instances */
+#define MTB_INSTS         { MTB }                    /**< \brief (MTB) Instances List */
+
+//#define NVMCTRL_AUX0                  (0x00804000UL) /**< \brief (NVMCTRL) AUX0 Base Address */
+//#define NVMCTRL_AUX1                  (0x00806000UL) /**< \brief (NVMCTRL) AUX1 Base Address */
+#define NVMCTRL_AUX3                  (AUX3_FUSES_BASE_ADDRESS) /**< \brief (NVMCTRL) AUX3 Base Address */
+#define NVMCTRL           ((Nvmctrl  *)NVMCTRL_BASE_ADDRESS) /**< \brief (NVMCTRL) APB Base Address */
+//#define NVMCTRL_OTP1                  (0x00806000UL) /**< \brief (NVMCTRL) OTP1 Base Address */
+//#define NVMCTRL_OTP2                  (0x00806008UL) /**< \brief (NVMCTRL) OTP2 Base Address */
+#define NVMCTRL_OTP4                  (OTP4_FUSES_BASE_ADDRESS) /**< \brief (NVMCTRL) OTP4 Base Address */
+#define NVMCTRL_TEMP_LOG              (TEMP_LOG_FUSES_BASE_ADDRESS) /**< \brief (NVMCTRL) TEMP_LOG Base Address */
+#define NVMCTRL_USER                  (USER_FUSES_BASE_ADDRESS) /**< \brief (NVMCTRL) USER Base Address */
+#define NVMCTRL_INST_NUM  1                          /**< \brief (NVMCTRL) Number of instances */
+#define NVMCTRL_INSTS     { NVMCTRL }                /**< \brief (NVMCTRL) Instances List */
+
+#define PAC0              ((Pac      *)PAC0_BASE_ADDRESS) /**< \brief (PAC0) APB Base Address */
+#define PAC1              ((Pac      *)PAC1_BASE_ADDRESS) /**< \brief (PAC1) APB Base Address */
+#define PAC2              ((Pac      *)PAC2_BASE_ADDRESS) /**< \brief (PAC2) APB Base Address */
+#define PAC_INST_NUM      3                          /**< \brief (PAC) Number of instances */
+#define PAC_INSTS         { PAC0, PAC1, PAC2 }       /**< \brief (PAC) Instances List */
+
+#define PM                ((Pm       *)PM_BASE_ADDRESS) /**< \brief (PM) APB Base Address */
+#define PM_INST_NUM       1                          /**< \brief (PM) Number of instances */
+#define PM_INSTS          { PM }                     /**< \brief (PM) Instances List */
+
+#define PORT              ((Port     *)PORT_BASE_ADDRESS) /**< \brief (PORT) APB Base Address */
+#define PORT_IOBUS        ((Port     *)PORT_IOBUS_BASE_ADDRESS) /**< \brief (PORT) IOBUS Base Address */
+#define PORT_INST_NUM     1                          /**< \brief (PORT) Number of instances */
+#define PORT_INSTS        { PORT }                   /**< \brief (PORT) Instances List */
+#define PORT_IOBUS_INST_NUM 1                          /**< \brief (PORT) Number of instances */
+#define PORT_IOBUS_INSTS  { PORT_IOBUS }             /**< \brief (PORT) Instances List */
+
+#define RTC               ((Rtc      *)RTC_BASE_ADDRESS) /**< \brief (RTC) APB Base Address */
+#define RTC_INST_NUM      1                          /**< \brief (RTC) Number of instances */
+#define RTC_INSTS         { RTC }                    /**< \brief (RTC) Instances List */
+
+#define SERCOM0           ((Sercom   *)SERCOM0_BASE_ADDRESS) /**< \brief (SERCOM0) APB Base Address */
+#define SERCOM1           ((Sercom   *)SERCOM1_BASE_ADDRESS) /**< \brief (SERCOM1) APB Base Address */
+#define SERCOM2           ((Sercom   *)SERCOM2_BASE_ADDRESS) /**< \brief (SERCOM2) APB Base Address */
+#define SERCOM3           ((Sercom   *)SERCOM3_BASE_ADDRESS) /**< \brief (SERCOM3) APB Base Address */
+#define SERCOM_INST_NUM   4                          /**< \brief (SERCOM) Number of instances */
+#define SERCOM_INSTS      { SERCOM0, SERCOM1, SERCOM2, SERCOM3 } /**< \brief (SERCOM) Instances List */
+
+#define SYSCTRL           ((Sysctrl  *)SYSCTRL_BASE_ADDRESS) /**< \brief (SYSCTRL) APB Base Address */
+#define SYSCTRL_INST_NUM  1                          /**< \brief (SYSCTRL) Number of instances */
+#define SYSCTRL_INSTS     { SYSCTRL }                /**< \brief (SYSCTRL) Instances List */
+
+#define TC3               ((Tc       *)TC3_BASE_ADDRESS) /**< \brief (TC3) APB Base Address */
+#define TC4               ((Tc       *)TC4_BASE_ADDRESS) /**< \brief (TC4) APB Base Address */
+#define TC5               ((Tc       *)TC5_BASE_ADDRESS) /**< \brief (TC5) APB Base Address */
+#define TC_INST_NUM       3                          /**< \brief (TC) Number of instances */
+#define TC_INSTS          { TC3, TC4, TC5 }          /**< \brief (TC) Instances List */
+
+#define TCC0              ((Tcc      *)TCC0_BASE_ADDRESS) /**< \brief (TCC0) APB Base Address */
+#define TCC1              ((Tcc      *)TCC1_BASE_ADDRESS) /**< \brief (TCC1) APB Base Address */
+#define TCC2              ((Tcc      *)TCC2_BASE_ADDRESS) /**< \brief (TCC2) APB Base Address */
+#define TCC3              ((Tcc      *)TCC3_BASE_ADDRESS) /**< \brief (TCC2) APB Base Address */
+#define TCC_INST_NUM      4                          /**< \brief (TCC) Number of instances */
+#define TCC_INSTS         { TCC0, TCC1, TCC2, TCC3 }       /**< \brief (TCC) Instances List */
+
+#define WDT               ((Wdt      *)WDT_BASE_ADDRESS) /**< \brief (WDT) APB Base Address */
+#define WDT_INST_NUM      1                          /**< \brief (WDT) Number of instances */
+#define WDT_INSTS         { WDT }                    /**< \brief (WDT) Instances List */
+
+
 /* ************************************************************************** */
 /*   PIO DEFINITIONS FOR SAMD21E17L                                           */
 /* ************************************************************************** */
